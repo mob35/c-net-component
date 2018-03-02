@@ -1,0 +1,65 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>cart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+  <div *ngIf="cartData && cartData.items && cartData.items.length">
+    <ion-list mode="md" class="list-item">
+      <ion-item *ngFor="let item of cartData.items; let i = index;">
+        <ion-thumbnail item-start>
+          <preload-image class="products-image" [ratio]="{w:1, h:1}" [src]="item.product.images[0]"></preload-image>
+          <!-- <img [src]="item.product.images[0]" alt=""> -->
+        </ion-thumbnail>
+        <ion-label stacked>
+          <h2 class="product-name">{{item.product.name}}</h2>
+          <!-- <p class="price-name"> ({{item.product.price | number:'0.2-2'}} {{ 'THB' | translate}}) </p> -->
+          <p>{{item.product.price | number:'0.2-2'}} {{ 'THB'}}</p>
+        </ion-label>
+
+        <button ion-button icon-only item-right clear color="dark" class="icon-trash" (click)="removeItem(i)">
+          <ion-icon ios="ios-trash" md="ios-trash"></ion-icon>
+        </button>
+
+        <div class="counter" item-right>
+          <button ion-button icon-only clear color="app" class="icon-cart" (tap)="countDelete(item)">
+            <ion-icon name="ios-remove-circle-outline"></ion-icon>
+          </button>
+          <button ion-button icon-only clear class="icon-cart" color="dark">
+            {{item.qty}}
+          </button>
+          <button ion-button icon-only clear color="app" class="icon-cart" (tap)="countPlus(item)">
+            <ion-icon name="ios-add-circle-outline"></ion-icon>
+          </button>
+        </div>
+
+      </ion-item>
+    </ion-list>
+  </div>
+  <ion-row padding *ngIf="cartData === null || !cartData.items || cartData.items.length === 0">
+    <ion-col col-12 text-center>
+      <p padding>ไม่มีสินค้าในตะกร้า</p>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer>
+  <button ion-button block color="app" (click)="checkOut()" *ngIf="cartData && cartData.items && cartData.items.length">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          Check out ({{cartData.amount | number:'0.2-2'}} THB)
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
+</ion-footer>
