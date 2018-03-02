@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+    <h1 class="big-txt">Login</h1>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="credencial.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="credencial.password"></ion-input>
+    </ion-item>
+    <button ion-button full (click)="login()" [disabled]="!(credencial.username && credencial.password)">
+        <ion-icon name="key"></ion-icon>&nbsp; Login</button>
+  </div>
+
+</ion-content>
