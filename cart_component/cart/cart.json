@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "product": {
+                "_id": "prod1",
+                "name": "Product 1",
+                "images":["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rubik%27s_cube.svg/461px-Rubik%27s_cube.svg.png"],
+                "price": 100
+            },
+            "qty": 1,
+            "amount": 100
+        },
+        {
+            "product": {
+                "_id": "prod2",
+                "name": "Product 2",
+                "images":["https://media.24catalog.com/_12_/plist/310766_010_01.jpg"],
+                "price": 200
+            },
+            "qty": 2,
+            "amount": 400
+        },
+        {
+            "product": {
+                "_id": "prod3",
+                "name": "Product 3",
+                "images":["https://shop.thaiware.com/upload_misc/shop/2016_07/thumbnails/3182_16072811393832.jpg"],
+                "price": 300
+            },
+            "qty": 3,
+            "amount": 900
+        },
+        {
+            "product": {
+                "_id": "prod4",
+                "name": "Product 4",
+                "images":["https://th-live-01.slatic.net/p/4/thaitrendy-i-mama-1481195722-0557216-31ae21d2fbcf0ca93298ffcab03a6129-product.jpg"],
+                "price": 400
+            },
+            "qty": 4,
+            "amount": 1600
+        }
+    ],
+    "qty": 10,
+    "totalamount": 3000
+}
