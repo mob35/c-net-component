@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Camera Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col text-center>
+      <img src="{{imageForm}}">
+    </ion-col>
+  </ion-row>
+  <button ion-button color="primary" block (click)="selectImage('image', 1)">Upload Image</button>
+</ion-content>
