@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+    <h1 class="big-txt">Register</h1>
+    <ion-item>
+      <ion-label floating>Firstname</ion-label>
+      <ion-input type="text" [(ngModel)]="credencial.firstname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Lastname</ion-label>
+      <ion-input type="text" [(ngModel)]="credencial.lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="credencial.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Tel</ion-label>
+      <ion-input type="text" [(ngModel)]="credencial.tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="credencial.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="credencial.password"></ion-input>
+    </ion-item>
+    <button ion-button full (click)="register()" [disabled]="!(credencial.firstname && credencial.lastname && credencial.email && credencial.tel && credencial.username && credencial.password)">
+      <ion-icon name="contact"></ion-icon>&nbsp; Register</button>
+  </div>
+
+</ion-content>
