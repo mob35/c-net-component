@@ -15,7 +15,7 @@ export class ProfileServiceProvider {
     console.log('Hello ProfileServiceProvider Provider');
   }
   getProfile(): Promise<ProfileModel> {
-    return this.http.get('./profile.json')
+    return this.http.get('./assets/json/profile.json')
       .toPromise()
       .then(response => response as ProfileModel)
       .catch(this.handleError);
