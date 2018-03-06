@@ -1,6 +1,11 @@
- *ติดตั้ง Omise
+*ติดตั้ง Omise
 - npm install omise --save
 
+*import ที่ app.module
+- import { HttpClientModule, HttpClient } from '@angular/common/http';
+- imports: [
+    HttpClientModule
+  ]
 
 สมัคร omise จะได้ key test มา
 - https://www.omise.co/
