@@ -1,0 +1,37 @@
+page-register {
+    .bg {
+        background: #ee0979;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #ff6a00, #ee0979);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #ff6a00, #ee0979);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #fff;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 80vh;
+    }
+    .mod-btn {
+        background-color: #fff;
+        color: #fa501f;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    .mod-btn.activated {
+        background-color: rgb(219, 219, 219);
+        color: #fa501f;
+        border-radius: 8px;
+    }
+    .big-txt {
+        font-size: 3rem;
+    }
+    // .item-ios {
+    //     color: #fff;
+    //     background-color: rgba(0, 0, 0, 0.19);
+    // }
+}

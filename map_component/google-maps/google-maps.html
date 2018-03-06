@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <!-- <ion-title>Native map</ion-title> -->
+    <!-- <ion-buttons end>
+      <button ion-button icon-only clear end (click)="googleMapsAutocomplete()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons> -->
+    <ion-searchbar mode="ios" #places class="google-search" placeholder="SEARCH LOCATION"></ion-searchbar>
+    <!-- <input type="text" id="places" placeholder="{{ 'SEARCH_LOCATION' | translate }}"> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+  <div #map class="map">
+    <!-- (click)="updateAddress()" -->
+    <button ion-item text-wrap text-center class="info-item" *ngIf="address.province">
+      <p>{{ address.address }} {{ address.district }} {{ address.subdistrict }} {{ address.province }} {{ address.postcode }}
+      </p>
+    </button>
+    <div class="arrow-down" *ngIf="address.province"></div>
+  </div>
+  <button ion-button color="danger" class="btn-cf" (click)="doConfirm()" [disabled]="!address.province || address.province ===''">CONFIRM LOCATION</button>
+</ion-content>
+<!-- [disabled]="!address.province || address.province ===''" -->
