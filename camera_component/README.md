@@ -56,5 +56,5 @@ configFirebase() {
     firebase.initializeApp(config);
   }
 
-*** ตัวแปร config ทั้งหมดได้มาจากเว็บ https://firebase.google.com/ ที่ไปสร้างโครงการไว้ในขั้นตอนแรก Tabs Project Overview => Firebase สำหรับเว็บแอป
+*** ตัวแปร config ทั้งหมดได้มาจากเว็บ https://firebase.google.com/ ที่ไปสร้างโครงการที่สร้างไว้ในขั้นตอนแรก Tabs Project Overview => Firebase สำหรับเว็บแอป
 
