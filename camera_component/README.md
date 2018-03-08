@@ -17,6 +17,10 @@
 - ionic cordova plugin add com-badrit-base64 --save
 - npm install --save @ionic-native/base64
 
+- ติดตั้ง ImagePicker
+- ionic cordova plugin add cordova-plugin-telerik-imagepicker --variable PHOTO_LIBRARY_USAGE_DESCRIPTION="your usage message" --save
+- npm install --save @ionic-native/image-picker
+
 - ติดตั้ง Firebase
 - npm install firebase --save 
 - ใช้เป็น version "firebase": "4.8.0" แล้วทำการ npm update
