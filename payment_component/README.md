@@ -1,17 +1,36 @@
-*ติดตั้ง Omise
+1. copy folder payment ไปใส่ใน project ในส่วนของ pages
+
+2. copy folder omise ไปใส่ในส่วน providers
+
+3. import OmiseProvider ไปใส่ app.module ในส่วนของ providers
+
+providers:[
+  OmiseProvider
+]
+
+4. ติดตั้ง Omise
 - npm install omise --save
 
-*import ที่ app.module
+5. แก้ไข version ใน package.json
+จาก 
+- "omise": "^0.5.4"
+เป็น
+- "omise": "0.5.3"
+
+npm install อีกครั้ง
+
+6. import HttpClientModule ที่ app.module
 - import { HttpClientModule, HttpClient } from '@angular/common/http';
 - imports: [
     HttpClientModule
   ]
-
-สมัคร omise จะได้ key test มา
+  
+7. สมัคร omise จะได้ key test มา
 - https://www.omise.co/
 
+(ถ้ามี key แล้วให้ข้ามข้อนี้ครับ)
 
-*ไปที่ node_modules > omise > lib > apiResources.
+8. ไปที่ node_modules > omise > lib > apiResources.
 ใช้ source code
 - function resourceName(name) { return require('./resources/'+name)(omiseConfig); }
 
@@ -19,10 +38,3 @@
 - function resourceName(name) {
   return require(['./resources/', name, '.js'].join(''))(omiseConfig);
 }
-
-
-*แก้ไข version ใน package.json
-จาก 
-- "omise": "^0.5.4"
-เป็น
-- "omise": "0.5.3"
