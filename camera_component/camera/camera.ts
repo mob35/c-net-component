@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ActionSheetController } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { Camera, CameraOptions, CameraPopoverOptions } from '@ionic-native/camera';
 import { Crop } from '@ionic-native/crop';
 import { ImagePicker } from '@ionic-native/image-picker';
+/**
+ * Generated class for the CameraPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-camera',
-  templateUrl: 'camera.html'
+  templateUrl: 'camera.html',
 })
 export class CameraPage {
   images: Array<any> = [];
@@ -19,7 +27,6 @@ export class CameraPage {
     private imagePicker: ImagePicker,
     private loading: LoadingController
   ) {
-
   }
   selectImage(from, maxImg) {
     let actionSheet = this.actionSheetCtrl.create({
@@ -167,4 +174,5 @@ export class CameraPage {
   updateImage() {
     this.imageForm = this.images && this.images.length > 0 ? this.images[this.images.length - 1] : '';
   }
+
 }
