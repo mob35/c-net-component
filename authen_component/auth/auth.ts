@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AuthProvider {
-  public url: string = 'http:api-url.com/';
+  public url: string = 'https://ic-pos-service-dev.herokuapp.com/';
   jwt: JwtHelper = new JwtHelper();
   constructor(
     private http: HttpClient
@@ -17,7 +17,7 @@ export class AuthProvider {
     return tokenNotExpired();
   }
 
-  userIsExp() {
+  user() {
     if (this.authenticated()) {
       return this.jwt.decodeToken(window.localStorage.getItem('token'))
     } else {
@@ -26,14 +26,14 @@ export class AuthProvider {
   }
 
   login(credentials) {
-    return this.http.post(this.url + '', credentials)
+    return this.http.post(this.url + 'api/auth/signin', credentials)
       .toPromise()
       .then(response => this.loginSuccess(response))
       .catch(err => this.handleError(err));
   }
 
   signup(credential) {
-    return this.http.post(this.url + '', credential)
+    return this.http.post(this.url + 'api/auth/signup', credential)
       .toPromise()
       .then(response => this.registerSuccess(response))
       .catch(err => this.handleError(err));

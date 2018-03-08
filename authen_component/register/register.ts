@@ -19,11 +19,11 @@ export class RegisterPage {
 
   register() {
     console.log(this.credencial);
-    // this.auth.signup(this.credencial).then(data => {
-    //   console.log(data);
-    // }).catch(err => {
-    //   alert(err)
-    // });
+    this.auth.signup(this.credencial).then(data => {
+      console.log(data);
+    }).catch(err => {
+      alert(err)
+    });
   }
 
 }

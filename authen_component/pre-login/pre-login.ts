@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RegisterPage } from '../register/register';
-import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the PreLoginPage page.
@@ -25,11 +23,11 @@ export class PreLoginPage {
   }
 
   gotoLogin() {
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push('LoginPage');
   }
 
   gotoRegister() {
-    this.navCtrl.push(RegisterPage);
+    this.navCtrl.push('RegisterPage');
   }
 
 }

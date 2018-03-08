@@ -19,11 +19,11 @@ export class LoginPage {
 
   login() {
     console.log(this.credencial);
-    // this.auth.login(this.credencial).then(data => {
-    //   console.log(data);
-    // }).catch(err => {
-    //   alert(err)
-    // });
+    this.auth.login(this.credencial).then(data => {
+      console.log(data);
+    }).catch(err => {
+      alert(err)
+    });
   }
 
 }
