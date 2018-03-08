@@ -19,7 +19,7 @@
     </ion-col>
     <ion-col text-center>
       <div class="imgFirstLogin">
-        <img src="{{user.profilepic}}">
+        <img src="{{user.profileImageURL}}">
         <ion-row class="camera">
           <ion-icon name="camera" color="light"></ion-icon>
         </ion-row>
@@ -33,14 +33,14 @@
       <ion-item>
         <ion-label floating color="topic">Firstname
         </ion-label>
-        <ion-input type="text" [(ngModel)]="user.firstname"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col col-6>
       <ion-item>
         <ion-label floating color="topic">Lastname
         </ion-label>
-        <ion-input type="text"  [(ngModel)]="user.lastname"></ion-input>
+        <ion-input type="text"  [(ngModel)]="user.lastName"></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>

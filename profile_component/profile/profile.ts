@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProfileServiceProvider } from "../profile/profile-service";
-import { ProfileModel } from '../../assets/model/profile.model';
+import { ProfileModel } from '../profile/profile.model';
 
 /**
  * Generated class for the ProfilePage page.
