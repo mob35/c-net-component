@@ -30,4 +30,4 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 6. copy address-detail Page to your project for edit data address detail 
 
-7. enjoy.
+7. copy folder icon to your project in assets
