@@ -16,10 +16,11 @@ import { ProfileModel } from '../profile/profile.model';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-user :ProfileModel = new ProfileModel();
-  constructor(public navCtrl: NavController, 
+  user: ProfileModel = new ProfileModel();
+  change: boolean = true;
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public ProfileServiceProvider: ProfileServiceProvider,) {
+    public ProfileServiceProvider: ProfileServiceProvider, ) {
   }
 
   ionViewDidLoad() {
@@ -34,5 +35,11 @@ user :ProfileModel = new ProfileModel();
       console.log(err);
     });
   }
+  updateProfile() {
+    this.change = false;
+  }
 
+  save() {
+    this.change = true;
+  }
 }
