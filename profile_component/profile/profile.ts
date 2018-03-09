@@ -90,6 +90,7 @@ export class ProfilePage {
       this.resizeImage(imageData).then((data) => {
         this.images.push(data);
         this.user.profileImageURL = data;
+        this.updateProfile();
         loading.dismiss();
       }, (err) => {
         loading.dismiss();
@@ -117,6 +118,7 @@ export class ProfilePage {
           this.resizeImage(imageData[i]).then((data) => {
             this.images.push(data);
             this.user.profileImageURL = data;
+            this.updateProfile();            
             loading.dismiss();
           }, (err) => {
             loading.dismiss();
