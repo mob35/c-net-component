@@ -40,7 +40,7 @@
       <ion-item>
         <ion-label floating color="topic">Lastname
         </ion-label>
-        <ion-input type="text"  [(ngModel)]="user.lastName" (ionChange)="updateProfile()"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.lastName" (ionChange)="updateProfile()"></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>
@@ -48,16 +48,16 @@
     <ion-col col-12>
       <ion-item>
         <ion-label floating color="topic">E-mail</ion-label>
-        <ion-input type="email"  [(ngModel)]="user.email" (ionChange)="updateProfile()"></ion-input>
+        <ion-input type="email" [(ngModel)]="user.email" (ionChange)="updateProfile()"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating color="topic">Tel</ion-label>
-        <ion-input type="number"  [(ngModel)]="user.tel" (ionChange)="updateProfile()"></ion-input>
+        <ion-input type="number" [(ngModel)]="user.tel" (ionChange)="updateProfile()"></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>
-  
+
 </ion-content>
 <ion-footer no-padding>
-  <button ion-button block [disabled]="change" (click)="save()">Save</button>
+  <button ion-button block [disabled]="change || !user.firstName || !user.lastName || !user.email || !user.tel" (click)="save()">Save</button>
 </ion-footer>
