@@ -36,6 +36,41 @@ export class OmiseProvider {
     })
   }
 
+  payBanking(omiseKey, bank, money) {
+    let omise = new Omise(omiseKey);
+    money = money * 100;
+    return new Promise((resolve, reject) => {
+      omise.sources.create({
+        amount: money,
+        currency: "thb",
+        type: bank
+      }
+        , function (err, resp) {
+          if (err) {
+            reject(err);
+          }
+          else {
+            // resolve(resp);
+            omise.charges.create({
+              'description': 'Charge for order ID: 888',
+              'amount': money, // 1,000 Baht
+              'currency': 'thb',
+              "return_uri": "http://res.cloudinary.com/hzzat7wj2/image/upload/v1508831661/Pmss_new_jrnlia.png",
+              "source": resp.id,
+            }, function (err, resp) {
+              if (err) {
+                reject(err);
+              }
+              else {
+                resolve(resp);
+              }
+            });
+          }
+        });
+    });
+  }
+
+
   private handleError(error: any): Promise<any> {
     return Promise.reject(error.message || error);
   }
