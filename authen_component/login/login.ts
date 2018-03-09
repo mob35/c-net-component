@@ -49,7 +49,7 @@ export class LoginPage {
       loadding.dismiss();
       let alert = this.alertCtrl.create({
         title: 'แจ้งเตือน',
-        message: JSON.parse(err._body).message,
+        message: err.message,
         mode: 'ios',
         buttons: [
           {

@@ -21,7 +21,7 @@
       <div class="imgFirstLogin">
         <img src="{{user.profileImageURL}}">
         <ion-row class="camera">
-          <ion-icon name="camera" color="light"></ion-icon>
+          <ion-icon name="camera" color="light" (click)="selectImage()"></ion-icon>
         </ion-row>
       </div>
     </ion-col>
@@ -31,14 +31,14 @@
   <ion-row>
     <ion-col col-6>
       <ion-item>
-        <ion-label floating color="topic">Firstname
+        <ion-label floating color="topic">Firstname<span class="danger">*</span>
         </ion-label>
         <ion-input type="text" [(ngModel)]="user.firstName" (ionChange)="updateProfile()"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col col-6>
       <ion-item>
-        <ion-label floating color="topic">Lastname
+        <ion-label floating color="topic">Lastname<span class="danger">*</span>
         </ion-label>
         <ion-input type="text" [(ngModel)]="user.lastName" (ionChange)="updateProfile()"></ion-input>
       </ion-item>
@@ -47,7 +47,7 @@
   <ion-row>
     <ion-col col-12>
       <ion-item>
-        <ion-label floating color="topic">E-mail</ion-label>
+        <ion-label floating color="topic">E-mail<span class="danger">*</span></ion-label>
         <ion-input type="email" [(ngModel)]="user.email" (ionChange)="updateProfile()"></ion-input>
       </ion-item>
       <ion-item>
@@ -59,5 +59,5 @@
 
 </ion-content>
 <ion-footer no-padding>
-  <button ion-button block [disabled]="change || !user.firstName || !user.lastName || !user.email || !user.tel" (click)="save()">Save</button>
+  <button ion-button block [disabled]="change || !user.firstName || !user.lastName || !user.email" (click)="save()">Save</button>
 </ion-footer>
