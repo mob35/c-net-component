@@ -59,9 +59,10 @@ export class CameraPage {
     const options: CameraOptions = {
       quality: 60,
       destinationType: this.camera.DestinationType.FILE_URI,
-      popoverOptions: popover,
+      // popoverOptions: popover,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      mediaType: this.camera.MediaType.PICTURE,
+      correctOrientation: true
     }
     let loading = this.loading.create();
     this.camera.getPicture(options).then((imageData) => {

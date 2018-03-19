@@ -12,6 +12,7 @@
 - ติดตั้ง Crop
 - ionic cordova plugin add cordova-plugin-crop --save
 - npm install --save @ionic-native/crop
+- ใช้เป็น version "crop": "4.5.2" แล้วทำการ npm update
 
 - ติดตั้ง Base64
 - ionic cordova plugin add com-badrit-base64 --save
